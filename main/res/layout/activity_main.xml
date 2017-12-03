@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="9dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="9dp"
+    android:orientation="vertical"
+    android:background="#9C9C9C"
+    tools:context="com.example.android.a2048.MainActivity">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_restart"
+        android:id="@+id/imageButton"
+        android:layout_alignTop="@+id/linearLayout2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="50sp"
+        android:id="@+id/textView"
+        android:layout_above="@+id/imageButton"
+        android:layout_alignLeft="@+id/gridLayout"
+        android:layout_alignStart="@+id/gridLayout" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:background="@drawable/grid"
+        android:id="@+id/gridLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp">
+
+        <TextView
+            android:id="@+id/block00"
+            style="@style/block"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            />
+        <TextView
+            android:id="@+id/block01"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            />
+
+        <TextView
+            android:id="@+id/block02"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/block03"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"/>
+        <TextView
+            android:id="@+id/block10"
+            style="@style/block"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block11"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block12"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/block13"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/block20"
+            style="@style/block"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block21"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block22"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/block23"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/block30"
+            style="@style/block"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block31"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/block32"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/block33"
+            style="@style/block"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/score"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout3"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/best"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/best"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/score"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignRight="@+id/gridLayout"
+        android:layout_alignEnd="@+id/gridLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/now"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/score"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</RelativeLayout>

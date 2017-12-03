@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="best">BEST</string>
+    <string name="now">NOW</string>
+</resources>
